@@ -1,0 +1,54 @@
+import React from 'react'
+import { Container, Grid, Form, Segment, Header, Button, Icon, Checkbox } from 'semantic-ui-react'
+
+const style = {
+  h1: {
+    marginTop: '1em',
+    padding: '1em 0',
+  }
+}
+
+const App = () => {
+  let text;
+  return (
+    <Container text>
+      <Header as='h1' content='TODO List' style={style.h1} textAlign='center' />
+      {/* <Grid columns = {18}>
+        <Grid.Row centered> */}
+      <Form>
+        <Form.Group>
+          <Form.Input
+            placeholder='Write TODO'
+            name='TODO'
+            width={13}
+            value={text} />
+          <Form.Button content='Submit' width={2} />
+        </Form.Group>
+      </Form>
+      {/* </Grid.Row>
+      </Grid> */}
+      <Segment.Group >
+        <Segment>
+          <Grid columns={3}>
+            <Grid.Column width={1}>
+              <Checkbox/>
+            </Grid.Column>
+            <Grid.Column width={14}>
+              Content
+            </Grid.Column>
+            <Grid.Column width={1}>
+                <Icon name="delete" color ="red"></Icon>
+            </Grid.Column>
+          </Grid>
+        </Segment>
+        
+        <Segment>Content</Segment>
+        <Segment>Content</Segment>
+        <Segment>Content</Segment>
+        <Segment>Content</Segment>
+      </Segment.Group>
+    </Container>
+  );
+}
+
+export default App;
